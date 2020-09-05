@@ -1,23 +1,31 @@
-<!-- <h2>TITLE</h2>
-<input type="text" name="TITLE">
+<h2> Create an Article </h2>
+<% if @article.errors.any? %>
+<h2>Following errors are preventing the errors from being created</h2>
+<ul>
+<% @article.errors.full_messages.each do |msg| %>
+<li>
+<%= msg %>
+</li>
+<% end %>
+</ul>
+<% end %>
 
-<h2>DESCRIPTION</h2>
-<input type="text" name="DESCRIPTION" style="width: 300px; height: 250px; "> -->
-
-<%= form_for @articles do |f|%>
+<%= form_for @article do  |f| %>
 <p>
 	<%= f.label :TITLE %> <br/>
 	<%= f.text_field :TITLE %>
-
 </p>
 
-<p>
-	<%= f.label :DESCRIPTION %><br/>
+
+ <p>
+	<%= f.label :DESCRIPTION %>  <br/>
 	<%= f.text_area :DESCRIPTION %>
+</p>
 
-</p>
 <p>
-	<%= f.submit :submit %>
-</p>
+	<%= f.submit  %>
+</p> 
 
 <% end %>
+
+
