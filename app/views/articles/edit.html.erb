@@ -1,33 +1,4 @@
 <h2>this is the edited page</h2>
-<% if @article.errors.any? %>
-<h2>Following errors are preventing the errors from being created</h2>
-<ul>
-<% @article.errors.full_messages.each do |msg| %>
-<li>
-<%= msg %>
-</li>
-<% end %>
-</ul>
-<% end %>
 
-<%= form_for @article do  |f| %>
-<p>
-	<%= f.label :TITLE %> <br/>
-	<%= f.text_field :TITLE %>
-</p>
+<%= render 'form' %>
 
-
- <p>
-	<%= f.label :DESCRIPTION %>  <br/>
-	<%= f.text_area :DESCRIPTION %>
-</p>
-
-<p>
-	<%= f.submit  %>
-</p> 
-
-<% end %>
-
-<p>
-	<%= link_to "Back to list of articles" , articles_path %>
-</p>
