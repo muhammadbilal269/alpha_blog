@@ -61,7 +61,21 @@ text-align: center;
 {
 	padding-top: 5px;
 	border-top: 1px solid #eaeaea;
+	
 }  
+.article-title
+{
+font-weight: bold;
+font-size :1.5em;
+}
+.article-body
+{
+	border-top:1px solid #eaeaea;
+	padding-top : 15px;
+	padding-bottom:15px;
+	
+}
+
   
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
