@@ -18,7 +18,7 @@ def edit
 end
 
 def update
-
+@article.user = User.first
 if @article.update(article_params)
 	flash[:success] = "Article is successfully updated"
 	redirect_to article_path(@article)
@@ -33,6 +33,7 @@ end
 
 def create
 	@article = Article.new(article_params)
+	@article.user = User.first
 	if @article.save
 		flash[:success]="new article was saved"
 	redirect_to article_path(@article)
